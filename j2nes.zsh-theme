@@ -1,4 +1,8 @@
+#!/bin/env zsh
 
-PROMPT='
-%{$fg[cyan]%}%5~%{$reset_color%}
-$ '
+PROMPT_SYMBOL="\uf101"
+
+prompt-symbol() { print -n "%{$fg[cyan]%}$PROMPT_SYMBOL%{$reset_color%} " }
+
+PROMPT="
+$(prompt-symbol)"
