@@ -23,3 +23,11 @@ and this project adheres to [Romantic Versioning](http://dafoster.net/articles/2
 
 ### Security
 - Fixed vulnerability
+
+
+
+## [v1.0.0] - Initial commit
+### Added
+- New theme, initial commit
+- Added changelog and license
+

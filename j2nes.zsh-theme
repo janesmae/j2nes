@@ -1,7 +1,7 @@
 #!/bin/env zsh
 
 ## J2nes - A theme for ZSH
-#  Copyright 2018 Jaan Janesmae <git@janesmae.com>
+#  Copyright 2018 Jaan Jänesmäe <git@janesmae.com>
 #  Licence: MIT
 
 
