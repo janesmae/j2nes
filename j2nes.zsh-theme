@@ -8,12 +8,14 @@
 ### Configuration options
 
 ZSH_THEME_PROMPT_SYMBOL="\u2771"				# Symbol for left prompt
-ZSH_THEME_PROMPT_COLOR="cyan"					# Default color for prompt symbol
-ZSH_THEME_PROMPT_COLOR_PRIVILEGED="red"				# Default color if user is privileged
+ZSH_THEME_PROMPT_COLOR=39					# Default color for prompt symbol (light blue)
+ZSH_THEME_PROMPT_COLOR_PRIVILEGED=9				# Default color if user is privileged (bright red)
+ZSH_THEME_PROMPT_COLOR_REMOTE=190				# Default color if user is connected remotely (greenish yellow)
 
-ZSH_THEME_GIT_COLOR="green"					# Color of branch name if  no staged commits
+ZSH_THEME_GIT_COLOR=28						# Color of branch name if  no staged commits (green)
 ZSH_THEME_GIT_COLOR_ICONS=240					# Color of icons (dark grey)
-ZSH_THEME_GIT_COLOR_CHANGESTOCOMMIT="yellow"			# Color of branch is there are staged changes to commit
+ZSH_THEME_GIT_COLOR_CHANGESTOCOMMIT=226				# Color of branch is there are staged changes to commit (yellow)
+
 ZSH_THEME_GIT_SYMBOL="\ue0a0"					# Git branch icon
 ZSH_THEME_GIT_SYMBOL_UNTRACKEDFILES="\uf713"			# Icon to track untracked files
 ZSH_THEME_GIT_SYMBOL_CHANGESNOTSTAGED="\u00b1"			# Icon to track not staged changes
@@ -33,8 +35,8 @@ prompt_opts=(cr percent subst)
 
 prompt_user() {
 	local color
-	[[ $(print -P "%#") == '#' ]] && color=$ZSH_THEME_PROMPT_COLOR_PRIVILEGED || color=$ZSH_THEME_PROMPT_COLOR
-	# [[ $UID == 0 || $EUID == 0 ]] && color=$ZSH_THEME_PROMPT_COLOR_PRIVILEGED || color=$ZSH_THEME_PROMPT_COLOR
+	([ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]) && color=$ZSH_THEME_PROMPT_COLOR_REMOTE || color=$ZSH_THEME_PROMPT_COLOR
+	[[ $(print -P "%#") == '#' ]] && color=$ZSH_THEME_PROMPT_COLOR_PRIVILEGED || color=$color
 	print -n "%F{$color}$ZSH_THEME_PROMPT_SYMBOL%f "
 }
 

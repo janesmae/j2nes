@@ -25,6 +25,13 @@ and this project adheres to [Romantic Versioning](http://dafoster.net/articles/2
 - Fixed vulnerability
 
 
+## [v1.0.1] - Update colors, track remote connection
+### Added
+- Tracking remote host with different color prompt symbol
+
+### Changed
+- Updated colors
+
 
 ## [v1.0.0] - Initial commit
 ### Added
