@@ -102,6 +102,15 @@ prompt_git()
 
 }
 
+### virtualenv
+
+prompt_venv()
+{
+	if [[ -n "$VIRTUAL_ENV" ]]; then
+		print -n "%F{226}venv(%F{46}`basename \"$VIRTUAL_ENV\"`%F{226})%f"
+	fi
+}
+
 ### Create prompts
 
 generate_left_prompt()
@@ -111,6 +120,7 @@ generate_left_prompt()
 
 generate_right_prompt()
 {
+	prompt_venv
 	prompt_git
 	prompt_cwd
 }
