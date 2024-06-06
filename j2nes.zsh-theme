@@ -17,9 +17,9 @@ ZSH_THEME_GIT_COLOR_ICONS=240					# Color of icons (dark grey)
 ZSH_THEME_GIT_COLOR_CHANGESTOCOMMIT=226				# Color of branch is there are staged changes to commit (yellow)
 
 ZSH_THEME_GIT_SYMBOL="\ue0a0"					# Git branch icon
-ZSH_THEME_GIT_SYMBOL_UNTRACKEDFILES="\uf481"			# Icon to track untracked files
+ZSH_THEME_GIT_SYMBOL_UNTRACKEDFILES="\uea7b"			# Icon to track untracked files
 ZSH_THEME_GIT_SYMBOL_CHANGESNOTSTAGED="\u00b1"			# Icon to track not staged changes
-ZSH_THEME_GIT_SYMBOL_STASHES="\ueae9"				# Icon to track stashes
+ZSH_THEME_GIT_SYMBOL_STASHES="\uf15c"				# Icon to track stashes
 ZSH_THEME_GIT_SYMBOL_AHEAD="\uf176"				# Icon to track if local repo is ahead
 ZSH_THEME_GIT_SYMBOL_BEHIND="\uf175"				# Icon to track if local repo is behind
 
